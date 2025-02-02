@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+body{
+    background: rgb(15, 15, 15);
+}
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* background: red; */
+}
+header h1{
+    color: white;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+nav{
+      /* width: 500px; */
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 40px;
+}
+nav a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+header p{
+    width: fit-content;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(128, 128, 128, 0.719);
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+body{
+    background: #000;
+}
+.heading{
+    width: 100%;
+    height: auto;
+}
+.heading h2{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.project{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.project-container{
+    margin-top: 100px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.projects-self{
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45);
+    border: 1px solid white;
+    width: 300px;
+    border-radius: 15px;
+    height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  
+}
+.projects-self .img{
+    width: 100%;
+    background-position: center;
+}
+
+.text-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+.text-container .info{
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.info ul{
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.info ul li{
+    
+    list-style: disc;
+    list-style-position: inside;
+    padding: 0px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+.links{
+    /* margin-top: 25px; */
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.links a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 8px;
+}
+.tech-stack{
+    width: 100%;
+    background: rgb(80, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 0 0  15px 15px;
+}
+.tech-stack p{
+    background: white;
+    padding: 2px 5px;
+    border-radius: 10px;
+}

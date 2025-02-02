@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+body{
+    background: rgb(15, 15, 15);
+}
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* background: red; */
+}
+header h1{
+    color: white;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+nav{
+    /* width: 500px; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+nav a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+header p{
+    width: fit-content;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(128, 128, 128, 0.719);
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+.light{
+    width: 100px;
+    height: 100%;
+    align-content: center;
+}
+.light i{
+    font-size: 2.5rem
+}
+
+
+.main-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: red; */
+}
+.main-body .body-row1{
+    width: 80%;
+   margin-top: 100px;
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+}
+.col-1{
+    width: 700px;
+    height: auto;
+    background: rgb(0, 0, 0);
+    border-radius: 40px;
+    position: relative;
+}
+.col-1 .hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+gap: 20px;
+}
+
+.col-1 .hero .img{
+    
+    border: 1px solid white;
+    border-radius: 30px 0 30px 0;
+    height: 250px;
+    width: 250px;
+    background-image: url('./gfonts.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.col-1 .hero .hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.col-1 .hero .hero-text h6{
+    font-size: 1.3rem;
+    color: grey;
+    font-weight: 400;
+}
+.col-1 .hero .hero-text h1{
+    font-size: 3.3rem;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    bottom:10px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.col-2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.col-2 .box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.col-2 .animate{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    background: #000;
+    border-radius: 20px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animate .screen{
+    width: 90%;
+    height: 18px;
+    overflow: hidden;
+    color: white;
+    
+}
+.col-2 .box .second-hero{
+height: 250px;
+width: 100%;
+margin: 0 10px;
+background: #000;
+border-radius: 40px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.col-2 .box .second-hero a{
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.col-2 .box .second-hero .card-hero{
+   
+    height: 90%;
+    
+    width: 95%;
+}
+.col-2 .box .second-hero .card-hero .pic{
+    height: 50%;
+    width: 95%;
+    background-image: url('./gfonts.png');
+    background-position: center;
+    margin-bottom: 10px;
+}
+.col-2 .box .second-hero .card-hero .info{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px;
+}
+.col-2 .box .second-hero .card-hero .info .texter h6{
+ font-size: 1rem;   
+ color: grey;
+}
+.col-2 .box .second-hero .card-hero .info .texter h3{
+ font-size: 1.5rem;   
+ color: white;
+ font-weight: 400 ;
+}
+
+
+.body-row2{
+    width: 80%;
+    height: auto;
+   
+   margin-top: 20px;
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+}
+.body-row2 .g-fonts{
+    border-radius: 40px;
+    height: 250px;
+    width: 350px;
+    position: relative;
+    background: #000;
+}
+.body-row2 .g-fonts a{
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.body-row2 .g-fonts .card-hero{
+
+  
+    height: 90%;
+    
+    width: 95%;
+}
+.body-row2 .g-fonts .card-hero .pic{
+    height: 50%;
+    width: 95%;
+    background-image: url('./gfonts.png');
+    background-position: center;
+    margin-bottom: 10px;
+}
+.body-row2 .g-fonts .card-hero .info{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px;
+}
+.body-row2 .g-fonts .card-hero .info .texter h6{
+ font-size: 1rem;   
+ color: grey;
+}
+.body-row2 .g-fonts .card-hero .info .texter h3{
+ font-size: 1.5rem;   
+ color: white;
+ font-weight: 400 ;
+}
+
+.body-row2 .services{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #000;
+    width: 550px;
+    border-radius: 40px;
+    
+}
+.body-row2 .services .images{
+    margin-top: 15px;
+
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.body-row2 .services .images div{
+height: 50px;
+width: 50px;
+}
+.body-row2 .services .images div i{
+    font-size: 2rem;
+}
+
+
+.body-row2 .services .info{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px;
+}
+.body-row2 .services .info .texter h6{
+ font-size: 1rem;   
+ color: grey;
+}
+.body-row2 .services .info .texter h3{
+ font-size: 1.5rem;   
+ color: white;
+ font-weight: 400 ;
+}
+
+
+
+.body-row2 .profiles{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #000;
+    height: 250px;
+    width: 350px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.body-row2 .profiles .images{
+margin-top: 15px;
+    display: flex;
+    height: 50%;
+    width: 70%;
+    border-radius: 40px;
+    justify-content: space-around;
+    align-items: center;
+    background: #000000bb;
+    box-shadow: 0px 0px 10px grey;
+    
+}
+.body-row2 .profiles .images div{
+height: 50px;
+width: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.body-row2 .profiles .images div i{
+    font-size: 2rem;
+}
+
+
+.body-row2 .profiles .info{
+    height: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px;
+}
+.body-row2 .profiles .info .texter h6{
+ font-size: 1rem;   
+ color: grey;
+}
+.body-row2 .profiles .info .texter h3{
+ font-size: 1.5rem;   
+ color: white;
+ font-weight: 400 ;
+}
+
+
+
+.last-row{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    height: 350px;
+}
+.last-row .colum1{
+    
+    width: 50%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.last-row .colum1 .dabba{
+border-radius: 30px;
+box-shadow: 0 0 10px rgba(128, 128, 128, 0.632);
+height: 70%;
+width: 20%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.last-row .colum1 .dabba h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+}
+.last-row .colum1 .dabba p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+}
+.last-row .colum2{
+    width: 50%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.last-row .colum2 .star-ulta{
+    position: absolute;
+    
+    bottom: 160px;
+    left: 40px;
+    height: 300px;
+    width: 300px;
+    background: red;
+    background-image: url('./200.jpg');
+    background-size: cover;
+}
+.last-row .colum2 .texting{
+    position: absolute;
+    bottom: 100px;
+    padding: 0 0 0 40px;
+}
+.last-row .colum2 .texting h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.last-row .colum2 .texting h1 span{
+    color: blue;
+}
+
+footer{
+    padding: 40px 0;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer h1{
+    color: white;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
