@@ -14,16 +14,27 @@
             <a href="./index.html">Home</a>
             <a href="#about">About</a>
 
-            <a href="./education.html">Education</a>
+            
 
-            <a href="./projects.html">Projects</a>
-            <a href="./experience.html">Experience</a>
-            <a href="./certificate.html">Certificate</a>
-            <a href="#contact">Contact</a>
+            
+            
+            <a href="./contact.html">Contact</a>
         </nav>
         <p><span>Let's talk</span></p>
+
+        <div class="hamburger" id="hamburger">
+            <i class="bx bx-menu"></i>
+        </div>
+
         <!-- <div class="light"><i class='bx bxs-moon' style='color:#ffffff'  ></i><i class='bx bxs-sun' style='color:#fff406'  ></i></div> -->
     </header>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="./index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./certificate.html">Certificates</a>
+        <a href="./contact.html">Contact</a>
+    </div>
     <section class="timeline">
         <h2 class="title">Experience</h2>
         <div class="timeline-container">
@@ -50,5 +61,22 @@
             </div>
         </div>
     </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            hamburger.innerHTML = mobileNav.classList.contains('active') 
+                ? '<i class="bx bx-x"></i>' 
+                : '<i class="bx bx-menu"></i>';
+        });
+        document.querySelectorAll(".mobile-nav a").forEach(ele=>{
+            ele.addEventListener('click',()=>{
+                mobileNav.classList.remove('active');
+                hamburger.innerHTML = '<i class="bx bx-menu"></i>'
+            })
+        })
+    </script>
 </body>
 </html>

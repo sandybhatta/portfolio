@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+        body {
+            height: 190vh;
+            background-color: #201f1f;
+           
+        }
+        header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* background: red; */
+}
+header h1{
+    color: white;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+nav{
+    /* width: 500px; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+nav a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+header p{
+    width: fit-content;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(128, 128, 128, 0.719);
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    width: 90%;
+    height: auto;
+    background: rgb(0, 0, 0);   
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    text-align: center;
+    z-index: 20;
+    border: 2px solid white;
+    transform: translateX(50%) translateY(0px);
+}
+
+.mobile-nav a {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.mobile-nav.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    background: rgb(10, 10, 10);
+}
+
+.contact-face{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.more-about{
+    height: auto;
+    border: 2px solid   rgba(255, 255, 255, 0.228);
+            background: linear-gradient(90deg, #5c5b5c, #000000b5);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            width: 25%;
+            display: flex;
+            justify-content: space-between; 
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+}
+.more-about h2{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 600;
+}
+.more-about .rows{
+    /* background: #000; */
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 25px;
+}
+.more-about .rows .photu{
+height: 65px;
+width: 65px;
+background: rgba(0, 0, 0, 0.699);
+display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+border-radius: 50%;
+}
+.more-about .rows .photu i{
+font-size: 2rem;
+}
+.more-about .rows .text{
+    margin:0  auto;
+    width: 60%;
+    color: white;
+    text-transform: capitalize;
+}
+.more-about .rows .text>p:nth-child(1){
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  
+
+}
+
+
+        .contact-form {
+            border: 2px solid   rgba(255, 255, 255, 0.571);
+            width: 40%;
+            background: linear-gradient(90deg, #5c5b5c, #000000b5);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 120px 0 0 0 ;
+            
+            text-align: center;
+            display: flex;
+            justify-content: space-between; 
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .contact-form h2{
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 1rem;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0ceb0c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0a9a0a;
+        }
+        .message-box {
+            display: none;
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+        .map{
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            height: 90vh;
+            align-items: center;
+        }
+        .map h2{
+            color: white;
+            text-transform: uppercase; 
+            padding: 20px;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .map p{
+            color: white;
+            text-transform: uppercase; 
+            padding: 20px;
+            font-size:1rem;
+            font-weight: 300;
+        }
+        .map .my-map{
+            height: 80%;
+            width: 80%;
+        }
+        @media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav {
+        display: none;
+    }
+    /* .mobile-nav {
+        display: block;
+    } */
+    .hamburger {
+        display: block;
+    }
+    .contact-face{
+        flex-direction: column;
+       margin-top: 40px;
+    }
+    .more-about{
+        width: 90%;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    .map{
+        
+    }
+.my-map{
+    width: 90%;
+}
+.more-about h2{
+    font-size: 1.5rem;
+}
+.more-about .rows .text p{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  font-size: 0.8rem;
+
+}
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GridX</h1>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="#about">About</a>
+
+            
+
+            
+            
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <p><span>Let's talk</span></p>
+
+        <div class="hamburger" id="hamburger">
+            <i class="bx bx-menu"></i>
+        </div>
+
+        <!-- <div class="light"><i class='bx bxs-moon' style='color:#ffffff'  ></i><i class='bx bxs-sun' style='color:#fff406'  ></i></div> -->
+    </header>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="./index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./certificate.html">Certificates</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+
+    <div class="contact-face">
+
+        <div class="more-about" >
+            <h2>Contact Info</h2>
+            <div class="rows">
+                <div class="photu">
+                    <i class='bx bxs-envelope' style='color:#fdfdfd'  ></i>
+                </div>
+                <div class="text">
+                    <p>email me</p>
+                     <p><span>ganjaAsscoiation.com</span></p>
+                </div>
+            </div>
+        
+        
+            <div class="rows">
+                <div class="photu">
+                    <i class='bx bx-phone' style='color:#fdfdfd'></i>
+                </div>
+                <div class="text">
+                    <p>contact us</p>
+                     <p><span>+91</span> <span>98989898</span></p>
+                     <p><span>+91</span> <span>00000000</span></p>
+                </div>
+            </div>
+        
+        
+            <div class="rows">
+                <div class="photu">
+                    <i class='bx bxs-location-plus' style='color:#ffffff'  ></i>
+                </div>
+                <div class="text">
+                    <p>Location</p>
+                     <p>pune</p>
+                  
+                </div>
+            </div>
+        
+          
+        
+        </div>
+
+
+        <form class="contact-form" id="contactForm">
+            <h2>Contact Me</h2>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <div class="message-box" id="successMessage">Your message has been sent successfully!</div>
+        </form>
+
+    </div>
+
+    <div class="map">
+        <h2>my location</h2>
+        <p>get connetct with me</p>
+        <div class="my-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21396.271730180706!2d73.7655044737567!3d18.55770212912375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becff05dd3cb%3A0xa1911297fb7fab7d!2sBaner%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1738774751488!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            hamburger.innerHTML = mobileNav.classList.contains('active') 
+                ? '<i class="bx bx-x"></i>' 
+                : '<i class="bx bx-menu"></i>';
+        });
+        document.querySelectorAll(".mobile-nav a").forEach(ele=>{
+            ele.addEventListener('click',()=>{
+                mobileNav.classList.remove('active');
+                hamburger.innerHTML = '<i class="bx bx-menu"></i>'
+            })
+        })
+   
+
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            // Google Form POST URL
+            let formURL = "https://docs.google.com/forms/d/e/1FAIpQLSeupD6fFDkCxLpQxQA2y1KthNhKRq-P-nQZ3-fS9IGLpMUrYQ/formResponse";
+            
+            let formData = new FormData();
+            formData.append("entry.2037418723", name);
+            formData.append("entry.1342379548", email);
+            formData.append("entry.1143093301", message);
+
+            fetch(formURL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            }).then(() => {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            }).catch(error => {
+                alert("Something went wrong. Please try again.");
+            });
+        });
+    </script>
+</body>
+</html>

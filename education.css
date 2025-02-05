@@ -11,8 +11,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: black;
-    z-index: 2;
+    /* background: red; */
 }
 header h1{
     color: white;
@@ -20,12 +19,12 @@ header h1{
     font-size: 2.5rem;
 }
 nav{
-     /* width: 500px; */
-     height: 100%;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     gap: 40px;
+    /* width: 500px; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
 }
 nav a{
     font-size: 1.2rem;
@@ -40,6 +39,52 @@ header p{
     padding: 10px 15px;
     border-radius: 15px;
 }
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    width: 90%;
+    height: auto;
+    background: rgb(0, 0, 0);   
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    text-align: center;
+    z-index: 20;
+    border: 2px solid white;
+    transform: translateX(50%) translateY(0px);
+}
+
+.mobile-nav a {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.mobile-nav.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    background: rgb(10, 10, 10);
+}
+
 body {
     font-family: Arial, sans-serif;
    background: #000;
@@ -54,6 +99,7 @@ body {
 
 .timeline {
     position: relative;
+    
     width: 50%;
     padding: 50px 0;
     display: flex;
@@ -62,6 +108,7 @@ body {
 
 .line {
     position: absolute;
+    top: 5vh;
     left: 50%;
     width: 5px;
     height: 100%;
@@ -102,3 +149,57 @@ body {
 h2 {
     color: #000000;
 }
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav {
+        display: none;
+    }
+    /* .mobile-nav {
+        display: block;
+    } */
+    .hamburger {
+        display: block;
+    }
+
+    .timeline {
+        width: 90%;  
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease-in-out;
+    }
+    .right {
+        left: 0%;
+    }
+
+    .content {
+        padding: 20px;
+        background: linear-gradient(90deg , rgba(8, 8, 8, 0.852),black);
+        box-shadow: 0 4px 18px rgb(255, 255, 255);
+        border-radius: 8px;
+        border: 2px solid white;
+    }
+    .content h2{
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .content p{
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+
+
+
+
+
+
+        }
